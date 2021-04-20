@@ -1,0 +1,25 @@
+{
+  "name": "BambooHR Session Extender",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page red when you click the icon",
+  "action": {
+    "default_popup": "about.html"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.bamboohr.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://section6.bamboohr.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
