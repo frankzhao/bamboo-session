@@ -1,8 +1,8 @@
 {
   "name": "BambooHR Session Extender",
   "manifest_version": 3,
-  "version": "0.1",
-  "description": "Turns the page red when you click the icon",
+  "version": "1.0",
+  "description": "Refreshes BambooHR sessions in the background",
   "action": {
     "default_popup": "about.html"
   },
