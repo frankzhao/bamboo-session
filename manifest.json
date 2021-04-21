@@ -7,15 +7,19 @@
     "default_popup": "about.html"
   },
   "permissions": [
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
     "https://*.bamboohr.com/"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": [
-        "https://section6.bamboohr.com/*"
+        "https://*.bamboohr.com/*"
       ],
       "js": [
         "content.js"

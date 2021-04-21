@@ -1,6 +1,5 @@
-console.log("Keeping alive BambooHR session...")
-window.setInterval(function() {
-    fetch('https://section6.bamboohr.com').then(r => r.text()).then(_ => {
-        console.log('Refreshed BambooHR.');
+const pattern = /https:\/\/.+\.bamboohr.com/;
+if (location.href.match(pattern)) {
+    chrome.runtime.sendMessage({action: 'getSource'}, function (response) {
     });
-}, 1000 * 60 * 25)
+}
