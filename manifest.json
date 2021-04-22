@@ -6,10 +6,7 @@
   "action": {
     "default_popup": "about.html"
   },
-  "permissions": [
-    "scripting",
-    "tabs"
-  ],
+  "permissions": [],
   "host_permissions": [
     "https://*.bamboohr.com/"
   ],
