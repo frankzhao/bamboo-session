@@ -1,12 +1,14 @@
 {
   "name": "BambooHR Session Extender",
   "manifest_version": 3,
-  "version": "1.1",
+  "version": "1.2",
   "description": "Refreshes BambooHR sessions in the background",
   "action": {
     "default_popup": "about.html"
   },
-  "permissions": [],
+  "permissions": [
+    "alarms"
+  ],
   "host_permissions": [
     "https://*.bamboohr.com/"
   ],
