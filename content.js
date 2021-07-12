@@ -1,8 +1,7 @@
 const pattern = /https:\/\/.+\.bamboohr.com/;
 if (location.href.match(pattern)) {
-    while (document.getElementById('openidConnectSub') === null) {
-        // Wait for dom to load.
+    if (!location.href.includes('login.php')) {
+        let sub = document.getElementById('openidConnectSub').value;
+        chrome.runtime.sendMessage({action: 'getSource', sub: sub});
     }
-    let sub = document.getElementById('openidConnectSub').value;
-    chrome.runtime.sendMessage({action: 'getSource', sub: sub});
 }
