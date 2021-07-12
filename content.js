@@ -1,6 +1,8 @@
 const pattern = /https:\/\/.+\.bamboohr.com/;
 if (location.href.match(pattern)) {
-    console.log("Requesting BambooHR session refresh")
-    chrome.runtime.sendMessage({action: 'getSource'}, function (_) {
-    });
+    while (document.getElementById('openidConnectSub') === null) {
+        // Wait for dom to load.
+    }
+    let sub = document.getElementById('openidConnectSub').value;
+    chrome.runtime.sendMessage({action: 'getSource', sub: sub});
 }
